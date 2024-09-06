@@ -9,4 +9,5 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  base: "/my-remix-app"
 });
