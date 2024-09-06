@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     remix({
       ignoredRouteFiles: ["**/*.css"],
+      basename: "/my-remix-app"
     }),
     tsconfigPaths(),
   ],
