@@ -3,12 +3,10 @@ import {
   Link,
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
-  useNavigation
+  useLoaderData
 } from "@remix-run/react";
 
 import type {LinksFunction} from "@remix-run/node";
@@ -18,8 +16,8 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref }
 ];
 
-import {json, redirect} from "@remix-run/node";
-import {createEmptyContact, getContacts} from "./data";
+import {json } from "@remix-run/node";
+import { getContacts} from "./data";
 
 export const loader = async () => {
   const tasks = await getContacts();
